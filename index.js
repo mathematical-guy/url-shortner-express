@@ -20,6 +20,11 @@ router.get('/', function (req, res) {
 });
 
 
+router.get('/redirect-to-google', function (req, res) {
+    res.redirect('https://google.com')
+    console.log(path);
+});
+
 app.use(express.static(path));
 app.use('/', router);
 // app.use('json')
